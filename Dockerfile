@@ -12,9 +12,9 @@ RUN apt-get update && \
     apt install -y nano && \
     # add user 'docker'
     useradd -m docker
-	
+
 # linter
-RUN apt-get install -y pylint
+RUN pip install pylint --upgrade
 
 # clean up
 RUN apt-get autoremove -y && \

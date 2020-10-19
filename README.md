@@ -1,5 +1,7 @@
 # hbm-dev-docker-image
-This image is used for developing a Python application.  
+This image is used for developing a Python application. Following additional libraries/frameworks are included:  
+- _pylint_ (https://pypi.org/project/pylint/)  
+
 The Docker image uses the _root_ user by default, but adds a user called _docker_. This way, a non-root user is available when opening the docker image, for instance, inside a Visual Studio Code using a _.devcontainer/devcontainer.json_ file:
 ```json
 {
