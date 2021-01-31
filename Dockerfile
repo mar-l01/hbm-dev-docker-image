@@ -16,6 +16,10 @@ RUN apt-get update && \
 # linter
 RUN pip install pylint --upgrade
 
+# packages required for image processing libraries below
+RUN apt-get install -y libgl1-mesa-glx &&\
+	apt-get install -y libglib2.0-0
+
 # image processing libraries
 RUN pip install numpy &&\
 	pip install imutils &&\
