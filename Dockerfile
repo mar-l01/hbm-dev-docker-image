@@ -16,6 +16,12 @@ RUN apt-get update && \
 # linter
 RUN pip install pylint --upgrade
 
+# image processing libraries
+RUN pip install numpy &&\
+	pip install imutils &&\
+	pip install scikit-image &&\
+	pip install opencv-python
+
 # clean up
 RUN apt-get autoremove -y && \
     apt-get clean -y
